@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WF Companion</title>
+<meta name="description" content="Unofficial Warframe desktop companion: inventory prices, warframe.market, relic overlay, mastery planning and alerts.">
+<style>
+  :root { --bg: #0e1117; --surface: #161b24; --border: #283041; --text: #e6e9ef; --dim: #9aa4b5; --accent: #d4af5f; --warn: #e0a040; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.55 "Segoe UI", system-ui, sans-serif; }
+  main { max-width: 860px; margin: 0 auto; padding: 48px 16px 64px; }
+  h1 { font-size: 40px; margin: 0 0 6px; letter-spacing: .5px; }
+  h1 span { color: var(--accent); }
+  .lead { color: var(--dim); font-size: 18px; margin: 0 0 24px; }
+  .btn { display: inline-block; background: var(--accent); color: #111; font-weight: 700; padding: 12px 22px; border-radius: 10px; text-decoration: none; }
+  .btn.ghost { background: none; color: var(--text); border: 1px solid var(--border); font-weight: 600; margin-left: 8px; }
+  .note { border: 1px solid var(--border); background: var(--surface); border-radius: 12px; padding: 14px 16px; margin: 18px 0; }
+  .note.ai { border-color: var(--accent); }
+  .note.risk { border-color: var(--warn); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin: 22px 0; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; }
+  .card b { color: var(--accent); }
+  footer { color: var(--dim); font-size: 13px; margin-top: 36px; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <h1>WF <span>Companion</span></h1>
+  <p class="lead">An unofficial desktop companion for Warframe on Windows: inventory prices, warframe.market, a relic reward overlay, mastery planning and alerts.</p>
+  <a class="btn" href="https://github.com/novicetinkerer/wf-companion-releases/releases/latest">Download for Windows</a>
+  <a class="btn ghost" href="https://github.com/novicetinkerer/wf-companion-releases">Releases &amp; source</a>
+
+  <div class="note ai"><b>Built with AI assistance.</b> Much of this project's code was written by an AI assistant (Claude, by Anthropic), directed, reviewed and tested by the author. It may contain mistakes: use at your own risk and report problems on GitHub.</div>
+  <div class="note risk"><b>Ban risk.</b> Inventory scans open the game process read-only (nothing is written or injected). No third-party tool that opens the game process can be guaranteed safe from anti-cheat or Digital Extremes' rules. <b>Safe mode</b> turns scans off completely; everything else keeps working.</div>
+
+  <div class="grid">
+    <div class="card"><b>Inventory &amp; market</b><br>Parts, mods, arcanes and relics with live warframe.market prices. Post and edit orders, auto-close them after trades.</div>
+    <div class="card"><b>Relic overlay</b><br>Prices, ducats and owned/needed set parts under each reward card; wanted parts marked.</div>
+    <div class="card"><b>Relics, Wanted, Ducanator</b><br>Radiant values, refine advice, trace fodder, wanted-part highlights, ducat planning.</div>
+    <div class="card"><b>Mastery</b><br>MR progress bar and the easiest items to build and rank next, with the relics you own.</div>
+    <div class="card"><b>Alerts</b><br>Fissures, open-world cycles, Circuit, Baro. Desktop, Discord and Telegram notifications.</div>
+    <div class="card"><b>Light while gaming</b><br>Closes its window when Warframe starts; the tray app uses about 15 MB.</div>
+  </div>
+
+  <footer>
+    GPL-3.0-or-later · includes code adapted from <a href="https://github.com/WyrmStudios/FrameForge">FrameForge</a> (GPL-3.0); source code attached to every release.<br>
+    Not affiliated with Digital Extremes or warframe.market. Warframe is a trademark of Digital Extremes Ltd.
+  </footer>
+</main>
+</body>
+</html>
