@@ -5,7 +5,7 @@ An unofficial desktop companion for **Warframe** (Windows 10/11): your tradeable
 **[Download the latest version](https://github.com/novicetinkerer/wf-companion-releases/releases/latest)** · [Website](https://novicetinkerer.github.io/wf-companion-releases/)
 
 > [!WARNING]
-> **This project was built with substantial help from AI.** Much of the code was written by an AI assistant (Claude, by Anthropic), directed, reviewed and tested by the author. It may contain mistakes. Use it at your own risk and report problems in [Issues](https://github.com/novicetinkerer/wf-companion-releases/issues).
+> **This project was built with substantial help from AI.** Much of the code was written by a large language model (LLM), directed, reviewed and tested by the author. It may contain mistakes. Use it at your own risk and report problems in [Issues](https://github.com/novicetinkerer/wf-companion-releases/issues).
 
 > [!CAUTION]
 > **Ban risk.** Inventory scans open the game process **read-only** (no writing, no injection) to read your account data. Similar tools are widely used, but no third-party tool that opens the game process can be guaranteed safe from anti-cheat or Digital Extremes' rules. Turn on **Safe mode** (first-run setup or Settings) to never touch the game process; everything except inventory scans keeps working.
@@ -26,6 +26,12 @@ An unofficial desktop companion for **Warframe** (Windows 10/11): your tradeable
 1. Download `WF.Companion_<version>_x64-setup.exe` from the [latest release](https://github.com/novicetinkerer/wf-companion-releases/releases/latest) and run it.
 2. Windows SmartScreen may warn because the installer isn't code-signed: **More info → Run anyway**.
 3. The app updates itself: when a new version is out it asks you, and installs only when you're not playing.
+
+### If Windows Security blocks it
+
+- **Controlled folder access** (Windows Security → Virus & threat protection → Ransomware protection) protects your Documents folder, where WF Companion keeps your data, and blocks unknown apps from writing there. If it's on, the install or update can fail ("error writing to file"), or the app shows **Can't save your data**. Fix: Ransomware protection → **Allow an app through Controlled folder access** → add `%LOCALAPPDATA%\WF Companion\wf-companion.exe` (and the installer, if it was blocked). The app's banner has a button that opens this page.
+- **Virus & threat protection**: if the installer or the app was removed or blocked, open Windows Security → Virus & threat protection → **Protection history**, pick the WF Companion entry and choose **Allow on device**, then run the installer again. Apps that read game memory and aren't code-signed are sometimes flagged by mistake.
+- **"Error writing to file" with nothing blocked**: WF Companion is probably still running. Quit it from the tray icon (or Task Manager → Details → `wf-companion.exe`) and run the installer again. Don't run WF Companion as administrator: a normal installer can't close or replace an administrator copy.
 
 Requirements for the relic overlay: Warframe in **Borderless Windowed**, and the **English (United States)** language pack (Windows text recognition). Settings → Relic overlay → *Check requirements* tests both.
 
